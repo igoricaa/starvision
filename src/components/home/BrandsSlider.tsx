@@ -37,20 +37,6 @@ const BrandsSlider = () => {
           <Image src={brand.logo} alt={brand.name} fill />
         </div>
       ))}
-
-      {/* <div className='keen-slider__slide number-slide1'>
-        <Image
-          src='/home/brands/fosil.png'
-          alt='Fosil'
-          width={252}
-          height={73}
-        />
-      </div>
-      <div className='keen-slider__slide number-slide2'>2</div>
-      <div className='keen-slider__slide number-slide3'>3</div>
-      <div className='keen-slider__slide number-slide4'>4</div>
-      <div className='keen-slider__slide number-slide5'>5</div>
-      <div className='keen-slider__slide number-slide6'>6</div> */}
     </section>
   );
 };
