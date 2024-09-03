@@ -23,6 +23,10 @@ const BrandsSlider = () => {
       s.moveToIdx(s.track.details.abs + 5, true, animation);
     },
     slides: { perView: 5, spacing: 124 },
+    breakpoints: {
+      '(max-width: 1024px)': { slides: { perView: 4, spacing: 80 } },
+      '(max-width: 480px)': { slides: { perView: 3, spacing: 32 } },
+    },
   });
   return (
     <section

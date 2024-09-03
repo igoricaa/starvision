@@ -14,12 +14,13 @@ export default function Home() {
     <main className={styles.main}>
       <Hero />
       <BrandsSlider />
-      {/* <OfferSection />
-      <TestimonialsSection />
+      <OfferSection />
+      <FeaturedProducts />
+      {/* <TestimonialsSection />
       <AboutSection /> */}
       {/* <PartnersSection/> */}
-      {/* <FeaturedProducts />
-      <BrandsAnimated /> */}
+      
+      {/* <BrandsAnimated /> */}
       {/* kvadrati ovde */}
       <NewsletterSection />
     </main>

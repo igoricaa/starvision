@@ -19,3 +19,23 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .slider {
+    padding: 5rem 0;
+
+    &__slide {
+      height: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .slider {
+    padding: 3rem 0;
+
+    &__slide {
+      height: 43px;
+    }
+  }
+}

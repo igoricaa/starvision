@@ -39,10 +39,21 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .hero {
+    padding-bottom: 2.5rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .hero {
+    padding-bottom: 1.5rem;
+
+    &__newsletterButton {
+      top: 5.875rem;
+      left: 1rem;
+      right: unset;
+    }
+
     p {
       font-size: 1rem;
       text-wrap: inherit;
