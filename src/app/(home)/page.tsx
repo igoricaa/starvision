@@ -13,8 +13,8 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <Hero />
-      {/* <BrandsSlider />
-      <OfferSection />
+      <BrandsSlider />
+      {/* <OfferSection />
       <TestimonialsSection />
       <AboutSection /> */}
       {/* <PartnersSection/> */}

@@ -2,6 +2,9 @@ import { Josefin_Sans } from 'next/font/google';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.scss';
+import Header from '@/components/header/Header';
+import Footer from '@/components/footer/Footer';
+import Banner from '@/components/header/Banner';
 
 const josefin = Josefin_Sans({
   subsets: ['latin'],
@@ -48,7 +51,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${josefin.variable}`}>{children}</body>
+      <body className={`${josefin.variable}`}>
+        <Banner />
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
