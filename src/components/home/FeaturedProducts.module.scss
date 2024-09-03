@@ -1,0 +1,96 @@
+.featuredProducts {
+  --line-thickness: 1px;
+  display: grid;
+  grid-template-columns: repeat(3, minMax(0, 1fr));
+  grid-template-rows: repeat(2, calc(100vw / 3));
+  overflow: hidden;
+
+  &__item {
+    padding: 2.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      background-color: #cccccc;
+      z-index: 1;
+      inset-block-start: 0;
+      inset-inline-start: 0;
+    }
+
+    &::after {
+      inline-size: 100vw;
+      block-size: var(--line-thickness);
+    }
+
+    &::before {
+      inline-size: var(--line-thickness);
+      block-size: 100vh;
+    }
+
+    a {
+      align-self: flex-start;
+    }
+
+    &__bg {
+      z-index: -1;
+      object-fit: cover;
+    }
+
+    &__main {
+      grid-column: span 2 / span 2;
+      padding-top: 3.5rem;
+    }
+
+    &__category {
+      font-size: 0.875rem;
+      color: #2a2a2a;
+      padding: 0.5rem 1rem;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      border-radius: 3rem;
+      align-self: flex-start;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .featuredProducts {
+    &__item {
+      padding: 1.5rem;
+      &__main {
+        &__title {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .featuredProducts {
+    grid-template-columns: repeat(2, minMax(0, 1fr));
+    grid-template-rows: repeat(3, 50vw);
+
+    &__item {
+      padding: 1rem;
+
+      &__main {
+        &__title {
+          font-size: 28px;
+        }
+      }
+
+      &__title {
+        font-size: 18px;
+      }
+
+      &__category {
+        font-size: 12px;
+      }
+    }
+  }
+}

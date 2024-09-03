@@ -6,24 +6,24 @@ type FeaturedProductProps = {
 
 export const featuredProducts: FeaturedProductProps[] = [
   {
-    title: 'Fosil',
+    title: 'David Beckham',
     category: 'Sunčane',
-    image: '/home/products/fosil.png',
+    image: '/products/david_beckham_naocare.png',
   },
   {
-    title: 'Fosil',
+    title: 'David Beckham',
     category: 'Sunčane',
-    image: '/home/products/fosil.png',
+    image: '/products/david_beckham_naocare.png',
   },
   {
-    title: 'Fosil',
+    title: 'David Beckham',
     category: 'Sunčane',
-    image: '/home/products/fosil.png',
+    image: '/products/david_beckham_naocare.png',
   },
   {
-    title: 'Fosil',
+    title: 'David Beckham',
     category: 'Sunčane',
-    image: '/home/products/fosil.png',
+    image: '/products/david_beckham_naocare.png',
   },
 ];
 
