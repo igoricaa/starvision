@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import styles from './page.module.scss';
 import Hero from '@/components/Hero';
 import BrandsSlider from '@/components/BrandsSlider';
@@ -9,6 +8,7 @@ import FeaturedProducts from '@/components/FeaturedProducts';
 import BrandsAnimated from '@/components/BrandsAnimated';
 import NewsletterSection from '@/components/NewsletterSection';
 import BenefitsSection from '@/components/BenefitsSection';
+import CtaSection from '@/components/CtaSection';
 
 export default function Home() {
   return (
@@ -22,6 +22,7 @@ export default function Home() {
       <TestimonialsSection />
       <BenefitsSection />
       {/* <PartnersSection/> */}
+      <CtaSection />
 
       {/* kvadrati ovde */}
       <NewsletterSection />

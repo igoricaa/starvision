@@ -4,11 +4,6 @@ import { useState } from 'react';
 import styles from './BenefitCard.module.scss';
 import Logo from './ui/Logo';
 
-type BenefitCardProps = {
-  shortText: string;
-  longText: string;
-};
-
 const BenefitCard = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 

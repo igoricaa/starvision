@@ -113,3 +113,25 @@ export const testimonials: TestimonialProps[] = [
     text: '¨If we could give every individual the right amount of nourishment and exercise, not too little and not too much, we would have found the safest way to health.¨',
   },
 ];
+
+export type CtaItemProps = {
+  imageSrc: string;
+  imageAlt: string;
+  title: string;
+  buttonText: string;
+};
+
+export const ctaItems: CtaItemProps[] = [
+  {
+    imageSrc: '/home/contact.png',
+    imageAlt: 'Star Vision kontakt',
+    title: 'Za svaki stil, kontaktirajte nas za upit',
+    buttonText: 'Kontaktirajte nas',
+  },
+  {
+    imageSrc: '/home/locations.png',
+    imageAlt: 'Star Vision lokacije',
+    title: 'Regionalno prisutni, globalno orijentisani',
+    buttonText: 'Nadjite lokaciju',
+  },
+];

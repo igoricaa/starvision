@@ -4,7 +4,7 @@
     background-color: #fff;
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;
-    padding: 4.5rem 2.5rem 8rem 5.75rem;
+    padding: 4.5rem 2.5rem 4rem 5.75rem;
     color: #000;
     position: absolute;
     z-index: 0;
@@ -48,15 +48,17 @@
         max-height: 0;
         opacity: 0;
         visibility: hidden;
+        margin-block-start: 0;
         transition: opacity 0.3s ease, visibility 1s ease,
-          max-height 0.75s ease 0.1s;
+          max-height 0.75s ease 0.1s, margin-block-start 0.5s ease 0.1s;
 
         &.visible {
           opacity: 1;
           visibility: visible;
           max-height: 30rem;
           transition: opacity 1s ease 0.5s, visibility 1s ease,
-            max-height 1s ease;
+            max-height 1s ease, margin-block-start 0.5s ease;
+          margin-block-start: 1.5rem;
         }
       }
     }
@@ -103,15 +105,7 @@
 
       &__text {
         font-size: 1rem;
-        margin-block-start: 1.5rem;
       }
-    }
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .benefits {
-    &__card {
     }
   }
 }
@@ -149,6 +143,12 @@
       &__text {
         font-size: 0.875rem;
         margin-block-start: 1rem;
+
+        &.long {
+          &.visible {
+            margin-block-start: 1rem;
+          }
+        }
       }
 
       &__expandButton {

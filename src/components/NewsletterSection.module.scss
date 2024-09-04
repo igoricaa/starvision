@@ -1,6 +1,6 @@
 .newsletter {
   width: 100%;
-  padding: 4.125rem 0 4.5rem;
+  padding: 4.125rem var(--padding-side) 4.5rem;
 
   &__container {
     display: grid;
@@ -46,6 +46,7 @@
 
   &__checkbox {
     display: flex;
+    align-items: center;
     flex: 1;
     gap: 0.75rem;
   }
@@ -62,7 +63,7 @@
 
   &__button {
     align-self: flex-start;
-    padding: 12px 2rem;
+    padding: 1rem 2rem;
     background-color: black;
     color: white;
     border: none;
