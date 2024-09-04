@@ -55,12 +55,12 @@
 
 @media (max-width: 1024px) {
   .about {
-    height: 82vw;
+    height: 40vh;
 
     &__card {
       padding: 2rem 2.5rem 2.5rem 7rem;
-      width: 80vw;
-      bottom: -8rem;
+      width: 85vw;
+      bottom: -13rem;
 
       &__logoWrapper {
         width: 300px;
@@ -90,11 +90,12 @@
 
 @media (max-width: 480px) {
   .about {
-    height: 82vw;
+    height: 50vh;
 
     &__card {
       padding: 1.5rem 1rem 2.5rem;
       width: calc(100vw - 1.5rem);
+      bottom: -16rem;
 
       &__logoWrapper {
         width: 210px;

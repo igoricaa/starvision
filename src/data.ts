@@ -93,3 +93,23 @@ export const brandsAnimated: BrandAnimatedProps[] = [
     image2: '/brands/animated/hugo-eyewear-2.png',
   },
 ];
+
+type TestimonialProps = {
+  author: string;
+  text: string;
+};
+
+export const testimonials: TestimonialProps[] = [
+  {
+    author: 'Pavle Popovic, Dipota CEO',
+    text: '¨If we could give every individual the right amount of nourishment and exercise, not too little and not too much, we would have found the safest way to health.¨',
+  },
+  {
+    author: 'Pavle Popovic, Dipota CEO',
+    text: '¨If we could give every individual the right amount of nourishment and exercise, not too little and not too much, we would have found the safest way to health.¨',
+  },
+  {
+    author: 'Pavle Popovic, Dipota CEO',
+    text: '¨If we could give every individual the right amount of nourishment and exercise, not too little and not too much, we would have found the safest way to health.¨',
+  },
+];
