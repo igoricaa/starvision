@@ -1,7 +1,8 @@
 import styles from './TestimonialsSection.module.scss';
 
 const TestimonialsSection = () => {
-  return <section className={styles.testimonialsSection}>
+  return <section className={styles.testimonials}>
+    
   </section>;
 };
 

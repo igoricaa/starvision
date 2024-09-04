@@ -10,7 +10,7 @@ const josefin = Josefin_Sans({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-josefin',
-  weight: ['400'],
+  weight: ['300', '400'],
 });
 
 const albra = localFont({

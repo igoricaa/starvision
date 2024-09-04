@@ -1,0 +1,83 @@
+.brandsAnimated__item {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+
+  &__name {
+    font-family: var(--font-albra);
+    font-size: 4rem;
+    color: rgba(12, 12, 12, 0.3);
+    transition: color 0.5s ease;
+
+    &.hovered {
+      color: rgba(12, 12, 12, 1);
+    }
+  }
+
+  &__imageWrapper {
+    position: absolute;
+    width: 292px;
+    height: 292px;
+    right: 0;
+
+    &:first-of-type {
+      z-index: 5;
+      bottom: 0;
+      transform: translate(345px, 190px);
+    }
+
+    &:last-of-type {
+      z-index: 10;
+      top: 0;
+      transform: translate(100px, 100px);
+    }
+  }
+
+  &__image {
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .brandsAnimated__item {
+    &__name {
+      font-size: 1.5rem;
+      line-height: 3rem;
+    }
+
+    &__imageWrapper {
+      width: 180px;
+      height: 180px;
+
+      &:first-of-type {
+        transform: translate(155px, 80px);
+      }
+
+      &:last-of-type {
+        transform: translate(50px, 50px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .brandsAnimated__item {
+    &__name {
+      font-size: 1.5rem;
+      line-height: 3rem;
+    }
+
+    &__imageWrapper {
+      width: 131px;
+      height: 131px;
+
+      &:first-of-type {
+        transform: translate(155px, 80px);
+      }
+
+      &:last-of-type {
+        transform: translate(50px, 50px);
+      }
+    }
+  }
+}

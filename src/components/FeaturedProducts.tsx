@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import styles from './FeaturedProducts.module.scss';
 import { featuredProducts } from '@/data';
-import Button from '../ui/Button';
+import Button from './ui/Button';
 
 const FeaturedProducts = () => {
   return (

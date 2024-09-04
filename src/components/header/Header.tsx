@@ -1,19 +1,11 @@
-import Image from 'next/image';
 import styles from './Header.module.scss';
 import Burger from './Burger';
+import Logo from '../ui/Logo';
 
 const Header = () => {
   return (
     <header className={styles.header}>
-      <div className={styles.header__logoWrapper}>
-        <Image
-          src='/logo/logo.svg'
-          alt='Star Vision'
-          width={36}
-          height={36}
-          priority
-        />
-      </div>
+      <Logo />
       <div className={styles.header__desktopMenuWrapper}>
         <div>
           <ul>

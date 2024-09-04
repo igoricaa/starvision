@@ -1,13 +1,13 @@
 import Image from 'next/image';
 import styles from './page.module.scss';
-import Hero from '@/components/home/Hero';
-import BrandsSlider from '@/components/home/BrandsSlider';
-import OfferSection from '@/components/home/OfferSection';
-import TestimonialsSection from '@/components/home/TestimonialsSection';
-import AboutSection from '@/components/home/AboutSection';
-import FeaturedProducts from '@/components/home/FeaturedProducts';
-import BrandsAnimated from '@/components/home/BrandsAnimated';
-import NewsletterSection from '@/components/home/NewsletterSection';
+import Hero from '@/components/Hero';
+import BrandsSlider from '@/components/BrandsSlider';
+import OfferSection from '@/components/OfferSection';
+import TestimonialsSection from '@/components/TestimonialsSection';
+import AboutSection from '@/components/AboutSection';
+import FeaturedProducts from '@/components/FeaturedProducts';
+import BrandsAnimated from '@/components/BrandsAnimated';
+import NewsletterSection from '@/components/NewsletterSection';
 
 export default function Home() {
   return (
@@ -16,11 +16,12 @@ export default function Home() {
       <BrandsSlider />
       <OfferSection />
       <FeaturedProducts />
-      {/* <TestimonialsSection />
-      <AboutSection /> */}
+      <BrandsAnimated />
+      <AboutSection />
+      <TestimonialsSection />
+
       {/* <PartnersSection/> */}
-      
-      {/* <BrandsAnimated /> */}
+
       {/* kvadrati ovde */}
       <NewsletterSection />
     </main>

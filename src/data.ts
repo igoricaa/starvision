@@ -54,3 +54,42 @@ export const brands: BrandProps[] = [
     logo: '/brands/polaroid-logo.svg',
   },
 ];
+
+type BrandAnimatedProps = {
+  name: string;
+  image1: string;
+  image2: string;
+};
+
+export const brandsAnimated: BrandAnimatedProps[] = [
+  {
+    name: 'Moschino',
+    image1: '/brands/animated/hugo-eyewear-1.png',
+    image2: '/brands/animated/hugo-eyewear-2.png',
+  },
+  {
+    name: 'Fosil',
+    image1: '/brands/animated/hugo-eyewear-1.png',
+    image2: '/brands/animated/hugo-eyewear-2.png',
+  },
+  {
+    name: 'Hugo Boss',
+    image1: '/brands/animated/hugo-eyewear-1.png',
+    image2: '/brands/animated/hugo-eyewear-2.png',
+  },
+  {
+    name: 'David Beckham',
+    image1: '/brands/animated/hugo-eyewear-1.png',
+    image2: '/brands/animated/hugo-eyewear-2.png',
+  },
+  {
+    name: 'Jaguar',
+    image1: '/brands/animated/hugo-eyewear-1.png',
+    image2: '/brands/animated/hugo-eyewear-2.png',
+  },
+  {
+    name: 'lool',
+    image1: '/brands/animated/hugo-eyewear-1.png',
+    image2: '/brands/animated/hugo-eyewear-2.png',
+  },
+];

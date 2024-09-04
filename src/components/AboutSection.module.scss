@@ -1,0 +1,123 @@
+.about {
+  position: relative;
+  height: 47vw;
+
+  &__bg {
+    z-index: -1;
+    object-fit: cover;
+  }
+
+  &__card {
+    width: 58rem;
+    background-color: #070707;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    padding: 2.5rem 4.85rem 4rem 11.375rem;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -10rem;
+    overflow: hidden;
+
+    &__logoWrapper {
+      position: absolute;
+      top: -5rem;
+      right: -5rem;
+      opacity: 0.2;
+      width: 370px;
+      height: 370px;
+    }
+
+    &__subtitle {
+      font-size: 1rem;
+      font-family: var(--font-josefin);
+      text-transform: uppercase;
+      padding: 12px 1.5rem;
+      border: 1px solid #fff;
+      border-radius: 1.5rem;
+      display: inline-block;
+    }
+
+    &__title {
+      font-size: 2rem;
+      line-height: 36px;
+      margin-block-start: 3.5rem;
+    }
+
+    &__text {
+      color: #edd3d3;
+      font-size: 1.125rem;
+      font-weight: 300;
+      margin-block-start: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .about {
+    height: 82vw;
+
+    &__card {
+      padding: 2rem 2.5rem 2.5rem 7rem;
+      width: 80vw;
+      bottom: -8rem;
+
+      &__logoWrapper {
+        width: 300px;
+        height: 300px;
+        top: -2.5rem;
+        right: -3rem;
+      }
+
+      &__subtitle {
+        font-size: 13px;
+        padding: 0.5rem 1rem;
+      }
+
+      &__title {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        margin-block-start: 4.5rem;
+      }
+
+      &__text {
+        font-size: 1rem;
+        margin-block-start: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    height: 82vw;
+
+    &__card {
+      padding: 1.5rem 1rem 2.5rem;
+      width: calc(100vw - 1.5rem);
+
+      &__logoWrapper {
+        width: 210px;
+        height: 210px;
+        top: -2.5rem;
+        right: -3rem;
+      }
+
+      &__subtitle {
+        font-size: 10px;
+        padding: 0.5rem 1rem;
+      }
+
+      &__title {
+        font-size: 1.375rem;
+        line-height: 1.75rem;
+        margin-block-start: 5.5rem;
+      }
+
+      &__text {
+        font-size: 0.875rem;
+        margin-block-start: 1rem;
+      }
+    }
+  }
+}

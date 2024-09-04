@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from './Hero.module.scss';
-import Button from '../ui/Button';
+import Button from './ui/Button';
 
 const Hero = () => {
   return (
