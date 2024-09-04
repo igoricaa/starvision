@@ -1,22 +1,14 @@
-.about {
-  position: relative;
-  height: 47vw;
-
-  &__bg {
-    z-index: -1;
-    object-fit: cover;
-  }
-
+.benefits {
   &__card {
-    width: 58rem;
-    background-color: #070707;
-    border-top-right-radius: 2rem;
-    border-bottom-right-radius: 2rem;
-    padding: 2.5rem 4.85rem 4rem 11.375rem;
-    color: #fff;
+    width: 46.25rem;
+    background-color: #fff;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    padding: 4.5rem 2.5rem 8rem 5.75rem;
+    color: #000;
     position: absolute;
     z-index: 0;
-    left: 0;
+    right: 0;
     bottom: -10rem;
     overflow: hidden;
 
@@ -24,7 +16,6 @@
       position: absolute;
       top: -5rem;
       right: -5rem;
-      opacity: 0.2;
       width: 370px;
       height: 370px;
       z-index: -1;
@@ -35,7 +26,7 @@
       font-family: var(--font-josefin);
       text-transform: uppercase;
       padding: 12px 1.5rem;
-      border: 1px solid #fff;
+      border: 1px solid #000;
       border-radius: 1.5rem;
       display: inline-block;
     }
@@ -47,16 +38,44 @@
     }
 
     &__text {
-      color: #edd3d3;
+      color: #3b3b3b;
       font-size: 1.125rem;
       font-weight: 300;
       margin-block-start: 1.5rem;
+
+      &.long {
+        height: auto;
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 1s ease,
+          max-height 0.75s ease 0.1s;
+
+        &.visible {
+          opacity: 1;
+          visibility: visible;
+          max-height: 30rem;
+          transition: opacity 1s ease 0.5s, visibility 1s ease,
+            max-height 1s ease;
+        }
+      }
+    }
+
+    &__expandButton {
+      background-color: #fff;
+      padding: 0.5rem 1.5rem;
+      font-size: 1rem;
+      color: #000;
+      border-radius: 3rem;
+      border: 1px solid #000;
+      margin-block-start: 3rem;
+      cursor: pointer;
     }
   }
 }
 
 @media (max-width: 1024px) {
-  .about {
+  .benefits {
     height: 40vh;
 
     &__card {
@@ -90,14 +109,24 @@
   }
 }
 
+@media screen and (max-width: 480px) {
+  .benefits {
+    &__card {
+    }
+  }
+}
+
 @media (max-width: 480px) {
-  .about {
+  .benefits {
     height: 50vh;
 
     &__card {
       padding: 1.5rem 1rem 2.5rem;
       width: calc(100vw - 1.5rem);
       bottom: -16rem;
+      right: unset;
+      left: 0;
+      border-radius: 0 1rem 1rem 0;
 
       svg {
         width: 210px;
@@ -120,6 +149,12 @@
       &__text {
         font-size: 0.875rem;
         margin-block-start: 1rem;
+      }
+
+      &__expandButton {
+        padding: 0.5rem 1rem;
+        font-size: 14px;
+        margin-block-start: 2rem;
       }
     }
   }

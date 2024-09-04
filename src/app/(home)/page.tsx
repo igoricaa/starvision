@@ -8,6 +8,7 @@ import AboutSection from '@/components/AboutSection';
 import FeaturedProducts from '@/components/FeaturedProducts';
 import BrandsAnimated from '@/components/BrandsAnimated';
 import NewsletterSection from '@/components/NewsletterSection';
+import BenefitsSection from '@/components/BenefitsSection';
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
       <BrandsAnimated />
       <AboutSection />
       <TestimonialsSection />
-
+      <BenefitsSection />
       {/* <PartnersSection/> */}
 
       {/* kvadrati ovde */}
