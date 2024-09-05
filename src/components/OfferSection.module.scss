@@ -11,6 +11,11 @@
     justify-content: space-between;
     gap: 1.5rem;
 
+    &:last-of-type {
+      background: url('/mask.svg') no-repeat;
+      background-size: 100%;
+    }
+
     &__bg {
       z-index: -1;
       object-fit: cover;
