@@ -1,0 +1,198 @@
+.footer {
+  height: 601px;
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 2rem 0 3rem;
+  color: #fff;
+  position: relative;
+
+  &__contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 0.875rem;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    &__title {
+      font-family: var(--font-albra);
+      font-size: 2.5rem;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    font-size: 22px;
+
+    &__column {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      &.first,
+      &.second {
+        padding-block-start: 3.5rem;
+      }
+
+      &.first {
+        margin-inline-end: 2rem;
+      }
+
+      &.second {
+        margin-inline-end: 7.5rem;
+      }
+
+      &.colaboration {
+        align-items: flex-end;
+        p {
+          margin-block-end: 0.5rem;
+          font-family: var(--font-albra);
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+
+    &__logoIconWrapper {
+      width: 13.5vw;
+      height: 12.555vw;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    &__logoTextWrapper {
+      width: 85vw;
+      position: absolute;
+      height: 274px;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    padding: 4rem 1.5rem 2rem;
+    height: 500px;
+
+    &__menu {
+      font-size: 20px;
+
+      &__column {
+        gap: 1.25rem;
+
+        &.first,
+        &.second {
+          padding-block-start: 3.5rem;
+        }
+
+        &.first {
+          margin-inline-end: 1.5rem;
+        }
+
+        &.second {
+          margin-inline-end: 2rem;
+        }
+      }
+    }
+
+    &__bottom {
+      gap: 0.5rem;
+
+      &__logoIconWrapper {
+        width: 16vw;
+        height: 21vw;
+      }
+
+      &__logoTextWrapper {
+        width: 82vw;
+        height: 130px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    justify-content: inherit;
+    height: auto;
+    padding: 3.5rem 1rem 7rem;
+
+    &__contactInfo {
+      font-size: 0.875rem;
+      gap: 1.5rem;
+      padding-block-end: 2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    &__menu {
+      display: grid;
+      grid-template-columns: repeat(2, minMax(0, 1fr));
+      font-size: 18px;
+
+      &__column {
+        gap: 1rem;
+
+        &.first,
+        &.second {
+          padding-block-start: 2rem;
+        }
+
+        &.first {
+          order: 2;
+        }
+
+        &.second {
+          order: 3;
+          margin-inline-end: 0;
+        }
+
+        &.colaboration {
+          grid-column: 1 / -1;
+          order: 1;
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          align-items: center;
+          gap: 2rem;
+          padding-block: 2rem 2.5rem;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+          p {
+            grid-column: 1 / -1;
+            font-size: 22px;
+          }
+        }
+      }
+    }
+
+    &__bottom {
+      gap: 0.5rem;
+
+      &__logoIconWrapper {
+        width: 16vw;
+        height: 21vw;
+      }
+
+      &__logoTextWrapper {
+        width: 82vw;
+        height: 95px;
+      }
+    }
+  }
+}
