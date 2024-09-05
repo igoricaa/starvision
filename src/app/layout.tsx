@@ -4,6 +4,7 @@ import './globals.scss';
 import Header from '@/components/header/Header';
 import Footer from '@/components/footer/Footer';
 import Banner from '@/components/header/Banner';
+import Lenis from '@/components/Lenis';
 
 const josefin = Josefin_Sans({
   subsets: ['latin'],
@@ -32,10 +33,12 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={`${josefin.variable} ${cormorant.variable}`}>
-        <Banner />
-        <Header />
-        {children}
-        <Footer />
+        <Lenis>
+          <Banner />
+          <Header />
+          {children}
+          <Footer />
+        </Lenis>
       </body>
     </html>
   );
