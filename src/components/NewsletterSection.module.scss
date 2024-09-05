@@ -77,8 +77,34 @@
       background-color: #333;
     }
   }
+}
 
-  @media (max-width: 991px) {
+@media (max-width: 1024px) {
+  .newsletter {
+    padding: 3.5rem var(--padding-side) 4rem;
+
+    &__header {
+      grid-column: span 7;
+    }
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__form {
+      grid-column: span 5;
+    }
+
+    &__button {
+      padding: 0.5rem 1rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .newsletter {
+    padding: 2rem var(--padding-side) 3rem;
+
     &__container {
       grid-template-columns: 1fr;
       gap: 1rem;
@@ -95,17 +121,10 @@
     &__form {
       grid-column: unset;
       align-items: start;
-      max-width: 30rem;
-    }
-
-    &__checkbox {
     }
 
     &__formFooter {
       flex-direction: column;
-    }
-
-    &__button {
     }
   }
 }
