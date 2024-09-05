@@ -36,9 +36,27 @@
       align-self: flex-start;
     }
 
+    &:hover {
+      .featuredProducts__item__bg {
+        opacity: 0;
+        visibility: hidden;
+
+        &__hover {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
     &__bg {
       z-index: -1;
       object-fit: cover;
+      transition: opacity 0.5s ease-in-out;
+
+      &__hover {
+        opacity: 0;
+        visibility: hidden;
+      }
     }
 
     &__main {

@@ -4,6 +4,51 @@
   color: #000;
   border-radius: 3rem;
   align-self: flex-start;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  i {
+    display: flex;
+    position: relative;
+    z-index: 1;
+
+    svg {
+      transition: transform 0.5s ease;
+    }
+  }
+
+  p {
+    position: relative;
+    z-index: 2;
+  }
+
+  .overlay {
+    position: absolute;
+    display: block;
+    width: 0px;
+    height: 0px;
+    background-color: red;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1;
+    transition: width 0.5s, height 0.5s;
+  }
+
+  &:hover {
+    .overlay {
+      width: 500px;
+      height: 500px;
+    }
+
+    i {
+      svg {
+        transform: translateX(10px);
+      }
+    }
+  }
 
   &.transparent {
     background-color: transparent;
@@ -19,5 +64,12 @@
   .button {
     padding: 0.5rem 1rem;
     font-size: 14px;
+
+    i {
+      svg {
+        width: 17px;
+        height: 10px;
+      }
+    }
   }
 }

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import styles from './BenefitCard.module.scss';
 import Logo from './ui/Logo';
+import ArrowRight from './icons/ArrowRight';
 
 const BenefitCard = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -13,6 +14,9 @@ const BenefitCard = () => {
 
       <h2 className={styles.benefits__card__subtitle}>
         Benefiti i zanimljivosti
+        <i>
+          <ArrowRight color='#000' />
+        </i>
       </h2>
       <h3 className={styles.benefits__card__title}>Zona Eksperta</h3>
       <p className={[styles.benefits__card__text, styles.short].join(' ')}>

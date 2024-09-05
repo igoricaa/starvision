@@ -1,6 +1,5 @@
-import { Josefin_Sans } from 'next/font/google';
+import { Josefin_Sans, Cormorant_Garamond } from 'next/font/google';
 import type { Metadata } from 'next';
-import localFont from 'next/font/local';
 import './globals.scss';
 import Header from '@/components/header/Header';
 import Footer from '@/components/footer/Footer';
@@ -13,14 +12,11 @@ const josefin = Josefin_Sans({
   weight: ['300', '400'],
 });
 
-const albra = localFont({
-  src: [
-    {
-      path: '../../fonts/AlbraBookTRIAL-Regular.woff2',
-      weight: '400',
-    },
-  ],
-  variable: '--font-albra',
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-cormorant',
+  weight: ['400'],
 });
 
 // export const metadata: Metadata = {
@@ -35,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${josefin.variable} ${albra.variable}`}>
+      <body className={`${josefin.variable} ${cormorant.variable}`}>
         <Banner />
         <Header />
         {children}

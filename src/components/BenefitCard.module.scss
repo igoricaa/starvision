@@ -12,7 +12,7 @@
     bottom: -10rem;
     overflow: hidden;
 
-    svg {
+    > svg {
       position: absolute;
       top: -5rem;
       right: -5rem;
@@ -28,7 +28,15 @@
       padding: 12px 1.5rem;
       border: 1px solid #000;
       border-radius: 1.5rem;
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+
+      i {
+        display: flex;
+        position: relative;
+        z-index: 1;
+      }
     }
 
     &__title {
@@ -85,7 +93,7 @@
       width: 85vw;
       bottom: -13rem;
 
-      svg {
+      > svg {
         width: 300px;
         height: 300px;
         top: -2.5rem;
@@ -122,7 +130,7 @@
       left: 0;
       border-radius: 0 1rem 1rem 0;
 
-      svg {
+      > svg {
         width: 210px;
         height: 210px;
         top: -2.5rem;
@@ -132,6 +140,13 @@
       &__subtitle {
         font-size: 10px;
         padding: 0.5rem 1rem;
+
+        i {
+          svg {
+            width: 17px;
+            height: 10px;
+          }
+        }
       }
 
       &__title {
