@@ -23,7 +23,15 @@
 
 @media screen and (max-width: 1024px) {
   .ctaSection {
-    padding: 13rem var(--padding-side) 7rem;
+    padding: 20rem var(--padding-side) 7rem;
+    gap: 1.5rem;
+
+    &__item {
+      padding: 1.5rem;
+      &__title {
+        font-size: 1.5rem;
+      }
+    }
   }
 }
 
