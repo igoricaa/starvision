@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styles from './Hero.module.scss';
 import Button from './ui/Button';
+import Link from 'next/link';
 
 const Hero = () => {
   return (
@@ -13,9 +14,9 @@ const Hero = () => {
         priority
       />
 
-      <a href='#newsletter' className={styles.hero__newsletterButton}>
+      <Link href='#newsletter' className={styles.hero__newsletterButton}>
         Prati Naš Newsletter
-      </a>
+      </Link>
 
       <h1>
         Star Vision
@@ -27,7 +28,7 @@ const Hero = () => {
         form life-long habits.
       </p>
       <div className={styles.hero__buttonsWrapper}>
-        <Button link='#saznajViše'>Saznaj Više</Button>
+        <Button link='#about'>Saznaj Više</Button>
         <Button link='#kontakt' variant='transparent'>
           Kontaktirajte Nas
         </Button>

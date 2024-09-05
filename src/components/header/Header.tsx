@@ -1,6 +1,7 @@
 import styles from './Header.module.scss';
 import Burger from './Burger';
 import Logo from '../ui/Logo';
+import Link from 'next/link';
 
 const Header = () => {
   return (
@@ -10,26 +11,26 @@ const Header = () => {
         <div>
           <ul>
             <li>
-              <a href='#brands'>Brendovi</a>
+              <Link href='#brands'>Brendovi</Link>
             </li>
             <li>
-              <a href='#about'>O nama</a>
+              <Link href='#about'>O nama</Link>
             </li>
             <li>
-              <a href='#testimonials'>Utisci</a>
+              <Link href='#testimonials'>Utisci</Link>
             </li>
             <li>
-              <a href='#models'>Modeli</a>
+              <Link href='#models'>Modeli</Link>
             </li>
           </ul>
         </div>
         <div>
           <ul>
             <li>
-              <a href='#partners'>Lista partnera</a>
+              <Link href='#partners'>Lista partnera</Link>
             </li>
             <li>
-              <a href='#contact'>Kontakt</a>
+              <Link href='#contact'>Kontakt</Link>
             </li>
           </ul>
         </div>

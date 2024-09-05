@@ -1,24 +1,3 @@
-// import styles from './NewsletterSection.module.scss';
-
-// const NewsletterSection = () => {
-//   return (
-//     <section className={styles.newsletterSection}>
-//       <h3>Prijavite se na nas Newsletter i budite u toku sa nasom ponudom </h3>
-
-//       <form className={styles.newsletterForm}>
-//         <input
-//           type='email'
-//           placeholder='Email'
-//           className={styles.newsletterInput}
-//         />
-//         <button className={styles.newsletterButton}>Prijavi se</button>
-//       </form>
-//     </section>
-//   );
-// };
-
-// export default NewsletterSection;
-
 'use client';
 import { useState } from 'react';
 import styles from './NewsletterSection.module.scss';
@@ -34,7 +13,7 @@ export default function NewsletterSection() {
   };
 
   return (
-    <section className={styles.newsletter}>
+    <section id='newsletter' className={styles.newsletter}>
       <div className={styles.newsletter__container}>
         <div className={styles.newsletter__header}>
           <h2 className={styles.newsletter__title}>

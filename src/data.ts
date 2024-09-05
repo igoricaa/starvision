@@ -1,7 +1,8 @@
-type FeaturedProductProps = {
+export type FeaturedProductProps = {
   title: string;
   category: string;
   image: string;
+  hoverImage: string;
 };
 
 export const featuredProducts: FeaturedProductProps[] = [
@@ -9,21 +10,25 @@ export const featuredProducts: FeaturedProductProps[] = [
     title: 'David Beckham',
     category: 'Sunčane',
     image: '/products/david_beckham_naocare.png',
+    hoverImage: '/home/aktuelna-ponuda.png',
   },
   {
     title: 'David Beckham',
     category: 'Sunčane',
     image: '/products/david_beckham_naocare.png',
+    hoverImage: '/home/aktuelna-ponuda.png',
   },
   {
     title: 'David Beckham',
     category: 'Sunčane',
     image: '/products/david_beckham_naocare.png',
+    hoverImage: '/home/aktuelna-ponuda.png',
   },
   {
     title: 'David Beckham',
     category: 'Sunčane',
     image: '/products/david_beckham_naocare.png',
+    hoverImage: '/home/aktuelna-ponuda.png',
   },
 ];
 

@@ -1,10 +1,19 @@
+'use client';
+
 import Image from 'next/image';
 import styles from './AboutSection.module.scss';
 import Logo from './ui/Logo';
+import { useInView } from 'react-intersection-observer';
 
 const AboutSection = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.8,
+    initialInView: true,
+    triggerOnce: true,
+  });
+
   return (
-    <section className={styles.about}>
+    <section id='about' className={styles.about} ref={ref}>
       <Image
         src='/home/about-bg.png'
         alt='Star Vision o nama'
@@ -12,7 +21,9 @@ const AboutSection = () => {
         fill
       />
 
-      <div className={styles.about__card}>
+      <div
+        className={[styles.about__card, inView ? styles.visible : ''].join(' ')}
+      >
         <Logo size={370} />
 
         <h2 className={styles.about__card__subtitle}>O nama</h2>

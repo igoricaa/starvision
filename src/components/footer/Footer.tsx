@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styles from './Footer.module.scss';
 import Logo from '../ui/Logo';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -37,14 +38,14 @@ const Footer = () => {
       </div>
       <div className={styles.footer__menu}>
         <div className={[styles.footer__menu__column, styles.first].join(' ')}>
-          <a href='#partners'>Lista partnera</a>
-          <a href='#contact'>Kontakt</a>
+          <Link href='#partners'>Lista partnera</Link>
+          <Link href='#contact'>Kontakt</Link>
         </div>
         <div className={[styles.footer__menu__column, styles.second].join(' ')}>
-          <a href='#brands'>Brendovi</a>
-          <a href='#about'>O nama</a>
-          <a href='#testimonials'>Utisci</a>
-          <a href='#suggestions'>Preporuka</a>
+          <Link href='#brands'>Brendovi</Link>
+          <Link href='#about'>O nama</Link>
+          <Link href='#testimonials'>Utisci</Link>
+          <Link href='#suggestions'>Preporuka</Link>
         </div>
         <div
           className={[styles.colaboration, styles.footer__menu__column].join(
