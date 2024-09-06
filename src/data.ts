@@ -140,3 +140,20 @@ export const ctaItems: CtaItemProps[] = [
     buttonText: 'Nadjite lokaciju',
   },
 ];
+
+export type MenuItem = {
+  href: string;
+  text: string;
+};
+
+export const footerFirstColumnItems: MenuItem[] = [
+  { href: '#partners', text: 'Lista partnera' },
+  { href: '#contact', text: 'Kontakt' },
+];
+
+export const footerSecondColumnItems: MenuItem[] = [
+  { href: '#brands', text: 'Brendovi' },
+  { href: '#about', text: 'O nama' },
+  { href: '#testimonials', text: 'Utisci' },
+  { href: '#suggestions', text: 'Preporuka' },
+];
