@@ -1,7 +1,5 @@
 import Image from 'next/image';
 import styles from './OfferSection.module.scss';
-import ponudaImg1 from '@/../public/home/starvision-dioptrijske-1.png';
-import ponudaImg2 from '@/../public/home/starvision-dioptrijske-2.png';
 
 const OfferSection = () => {
   return (
