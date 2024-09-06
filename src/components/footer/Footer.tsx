@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import styles from './Footer.module.scss';
-import Logo from '../ui/Logo';
 import Link from 'next/link';
 
 const Footer = () => {
@@ -38,14 +37,30 @@ const Footer = () => {
       </div>
       <div className={styles.footer__menu}>
         <div className={[styles.footer__menu__column, styles.first].join(' ')}>
-          <Link href='#partners'>Lista partnera</Link>
-          <Link href='#contact'>Kontakt</Link>
+          <ul>
+            <li className={styles.footer__menu__column__item}>
+              <Link href='#partners'>Lista partnera</Link>
+            </li>
+            <li className={styles.footer__menu__column__item}>
+              <Link href='#contact'>Kontakt</Link>
+            </li>
+          </ul>
         </div>
         <div className={[styles.footer__menu__column, styles.second].join(' ')}>
-          <Link href='#brands'>Brendovi</Link>
-          <Link href='#about'>O nama</Link>
-          <Link href='#testimonials'>Utisci</Link>
-          <Link href='#suggestions'>Preporuka</Link>
+          <ul>
+            <li className={styles.footer__menu__column__item}>
+              <Link href='#brands'>Brendovi</Link>
+            </li>
+            <li className={styles.footer__menu__column__item}>
+              <Link href='#about'>O nama</Link>
+            </li>
+            <li className={styles.footer__menu__column__item}>
+              <Link href='#testimonials'>Utisci</Link>
+            </li>
+            <li className={styles.footer__menu__column__item}>
+              <Link href='#suggestions'>Preporuka</Link>
+            </li>
+          </ul>
         </div>
         <div
           className={[styles.colaboration, styles.footer__menu__column].join(
@@ -59,29 +74,11 @@ const Footer = () => {
             width={163}
             height={71}
           />
-          <Image src='/diopta.svg' alt='Diopta' width={172} height={30} />
         </div>
       </div>
-      {/* <div className={styles.footer__bottom}> */}
-      <div className={styles.footer__bottom__logoIconWrapper}>
-        <Image
-          src='/logo/logo-footer.svg'
-          alt='Star Vision'
-          fill
-          sizes='15vw'
-          className={styles.footer__bottom__logoIcon}
-        />
+      <div className={styles.footer__bottom__logo}>
+        <Image src='/logo/logo-full.svg' alt='Star Vision' sizes='100vw' fill />
       </div>
-      <div className={styles.footer__bottom__logoTextWrapper}>
-        <Image
-          src='/logo/logo-text.svg'
-          alt='Star Vision'
-          fill
-          sizes='85vw'
-          className={styles.footer__bottom__logoText}
-        />
-      </div>
-      {/* // </div> */}
     </footer>
   );
 };
