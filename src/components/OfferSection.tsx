@@ -13,7 +13,7 @@ const OfferSection = () => {
       <OfferItem
         title='Budite korak ispred trendova, pronađite savršene naočare od naših novih partnera'
         description={`Traveling is a unique experience as it's the best way to unplug from the pushes and pulls of daily life. It helps us to forget about our problems, frustrations, and fears at home. During our journey, we experience life in different ways...`}
-        image='/home/suncane.png'
+        image='/home/offer_share_the_love.png'
       />
     </section>
   );

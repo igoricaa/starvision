@@ -13,10 +13,10 @@ const Hero = () => {
         fill
         priority
       />
-
+{/* 
       <Link href='#newsletter' className={styles.hero__newsletterButton}>
         Prati Naš Newsletter
-      </Link>
+      </Link> */}
 
       <h1>
         Star Vision

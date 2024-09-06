@@ -24,8 +24,7 @@ export default function Home() {
       {/* <PartnersSection/> */}
       <CtaSection />
 
-      {/* kvadrati ovde */}
-      <NewsletterSection />
+      {/* <NewsletterSection /> */}
     </main>
   );
 }
