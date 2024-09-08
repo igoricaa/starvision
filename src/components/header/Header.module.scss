@@ -2,10 +2,23 @@
   position: fixed;
   top: 36px;
   left: 0;
-  z-index: 1;
+  z-index: 999;
   width: 100%;
-  padding: 0 var(--padding-side);
-  display: flex;
+
+  &__wrapper {
+    width: 100%;
+    height: 4rem;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+
+    > svg {
+      width: 170px;
+      height: 34px;
+      z-index: 100;
+      padding-left: 1rem;
+    }
+  }
 
   &__desktopMenuWrapper {
     display: flex;
@@ -18,9 +31,6 @@
     ul {
       display: flex;
       gap: 1.5rem;
-
-      li {
-      }
     }
   }
 }
@@ -30,7 +40,9 @@
 
 @media screen and (max-width: 768px) {
   .header {
-    justify-content: space-between;
+    &__wrapper {
+      justify-content: space-between;
+    }
 
     &__desktopMenuWrapper {
       display: none;

@@ -1,13 +1,16 @@
 import styles from './Header.module.scss';
-import Burger from './Burger';
-import Logo from '../ui/Logo';
+import Burger from './Navigation';
 import Link from 'next/link';
+import LogoFull from '../ui/LogoFull';
+import BurgerIcon from '../ui/BurgerIcon';
+import Navigation from './Navigation';
 
 const Header = () => {
   return (
     <header className={styles.header}>
-      <Logo />
-      <div className={styles.header__desktopMenuWrapper}>
+      <div className={styles.header__wrapper}>
+        <LogoFull color='#000' />
+        {/* <div className={styles.header__desktopMenuWrapper}>
         <div>
           <ul>
             <li>
@@ -24,19 +27,19 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <div>
-          <ul>
+        <div> */}
+        {/* <ul>
             <li>
               <Link href='#partners'>Lista partnera</Link>
             </li>
             <li>
               <Link href='#contact'>Kontakt</Link>
             </li>
-          </ul>
-        </div>
+          </ul> */}
+        <Navigation />
+        {/* </div> */}
+        {/* </div> */}
       </div>
-
-      <Burger />
     </header>
   );
 };

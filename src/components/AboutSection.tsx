@@ -31,14 +31,14 @@ const AboutSection = () => {
           Star Vision; Vas stabilan partner za kontinuirani uspeh.
         </h3>
         <p className={styles.about__card__text}>
-          Kao vodeći distributer naočara i optičkih rešenja, Star Optic nudi
-          partnerima jedinstvene prednosti koje unapređuju vaše poslovanje.
-          Saradnja sa nama donosi pristup širokom asortimanu renomiranih
-          brendova, fleksibilne uslove nabavke i konkurentne cene. Naša stručna
-          podrška je tu da vam pomogne u svakom koraku - od odabira proizvoda do
-          marketinške podrške i edukacije zaposlenih. Sa Star Optic-om, možete
-          očekivati brzu isporuku, kvalitetne proizvode i pouzdanu saradnju koja
-          će doprineti rastu vašeg biznisa.
+          Mi smo Star Vision, lideri u distribuciji sunčanih i dioptrijskih
+          naočara, sa preko 20 godina iskustva na tržištu jugoistočne Evrope.
+          Kao deo kompanije Grossoptic, fokusirani smo na tržišta Srbije, Crne
+          Gore i Makedonije. Zastupamo globalne brendove poput Safilo, Menrad,
+          Etnia Barcelona i For Art&apos;s Sake, pružamo širok asortiman naočara
+          i diktiramo modne trendove. Naša misija? Posvećenost našim klijentima
+          i snažno prisustvo kroz vrhunske proizvode koje obožavaju milioni
+          ljudi širom sveta.
         </p>
       </div>
     </section>

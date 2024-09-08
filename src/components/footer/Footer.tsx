@@ -41,7 +41,6 @@ const ContactInfo = () => (
           className: 'instagram',
           target: '_blank',
           rel: 'noreferrer',
-          ariaLabel: 'Instagram',
         },
       ].map(({ href, text, className, ...props }: ContactItem) => (
         <a
