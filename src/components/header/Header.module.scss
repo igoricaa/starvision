@@ -33,6 +33,10 @@
       gap: 1.5rem;
     }
   }
+
+  &__mobile__container {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -40,12 +44,20 @@
 
 @media screen and (max-width: 768px) {
   .header {
+    top: 2rem;
+
     &__wrapper {
-      justify-content: space-between;
+      display: none;
     }
 
     &__desktopMenuWrapper {
       display: none;
+    }
+
+    &__mobile__container {
+      display: block;
+      position: relative;
+      padding: 0 1rem;
     }
   }
 }
