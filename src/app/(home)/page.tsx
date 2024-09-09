@@ -9,6 +9,7 @@ import BrandsAnimated from '@/components/BrandsAnimated';
 import NewsletterSection from '@/components/NewsletterSection';
 import BenefitsSection from '@/components/BenefitsSection';
 import CtaSection from '@/components/CtaSection';
+import Manufacturers from '@/components/manufacturers/Manufacturers';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <BrandsSlider />
       <OfferSection />
       <FeaturedProducts />
+      <Manufacturers />
       <BrandsAnimated />
       <AboutSection />
       <TestimonialsSection />

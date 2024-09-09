@@ -8,6 +8,7 @@ import ArrowRight from '../icons/ArrowRight';
 type ButtonProps = {
   link: string;
   variant?: 'transparent' | 'primary';
+  external?: boolean;
   children: React.ReactNode;
 };
 
@@ -24,7 +25,12 @@ export const calculateOverlayPosition = (
   overlay.style.left = `${x}px`;
 };
 
-const Button = ({ link, variant = 'primary', children }: ButtonProps) => {
+const Button = ({
+  link,
+  variant = 'primary',
+  external = false,
+  children,
+}: ButtonProps) => {
   const buttonRef = useRef<HTMLAnchorElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
 
@@ -53,6 +59,7 @@ const Button = ({ link, variant = 'primary', children }: ButtonProps) => {
     <Link
       ref={buttonRef}
       href={link}
+      target={external ? '_blank' : '_self'}
       className={[styles.button, styles[variant]].join(' ')}
     >
       <span ref={overlayRef} className={styles.overlay} />
