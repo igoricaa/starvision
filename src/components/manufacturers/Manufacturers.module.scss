@@ -1,52 +1,55 @@
+.manufacturersSection {
+  position: relative;
+}
+
 .manufacturers {
   padding: 12rem var(--padding-side) 4rem;
-  position: relative;
+}
 
-  &__navigation {
-    &__arrows {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 0.5rem;
-      position: absolute;
-      top: 121px;
-      right: 2.5rem;
+.manufacturers__navigation__arrows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  position: absolute;
+  top: 121px;
+  right: 2.5rem;
+  z-index: 10;
 
-      & .arrow {
-        background-color: #ff385c;
-        border-radius: 50%;
-        width: 2.5rem;
-        height: 2.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
+  & .arrow {
+    background-color: #ff385c;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 
-        i {
-          border: solid #fff;
-          border-width: 0 1.5px 1.5px 0;
-          display: inline-block;
-          padding: 3px;
-        }
+    i {
+      border: solid #fff;
+      border-width: 0 1.5px 1.5px 0;
+      display: inline-block;
+      padding: 3px;
+    }
 
-        &__left i {
-          transform: rotate(135deg);
-          -webkit-transform: rotate(135deg);
-        }
+    &__left i {
+      transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+    }
 
-        &__right i {
-          transform: rotate(-45deg);
-          -webkit-transform: rotate(-45deg);
-        }
+    &__right i {
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+    }
 
-        &.disabled {
-          background-color: transparent;
-          border: 1px solid #d2d1d3;
+    &.disabled {
+      background-color: transparent;
+      border: 1px solid #d2d1d3;
+      cursor: unset;
 
-          i {
-            border-color: #8f8c91;
-          }
-        }
+      i {
+        border-color: #8f8c91;
       }
     }
   }
@@ -94,7 +97,8 @@
       }
 
       &.forartssake {
-        height: 60px;
+        aspect-ratio: 447 / 104;
+        width: calc(33vw - 180px);
       }
     }
   }

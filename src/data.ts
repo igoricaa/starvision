@@ -200,8 +200,8 @@ export const manufacturers: ManufacturerProps[] = [
   {
     name: 'forartssake',
     image: '/brands/fas.png',
-    logo: '/brands/fas-logo.svg',
-    logoWhite: '/brands/fas-logo.svg',
+    logo: '/brands/fas-logo.png',
+    logoWhite: '/brands/fas-logo.png',
     description:
       'Londonski brend For Art&#39;s Sake, osnovan 2016. godine, poznat je po luksuznim sunčanim naočarima koje kombinuju umetnost i funkcionalnost. Njihovi dizajni su kreirani za samouverene žene i dostupni su u preko 500 prestižnih prodavnica širom sveta. Obožavaju ih slavne ličnosti poput Beyonce i Olivije Palermo, a često se pojavljuju u vodećim modnim časopisima poput Vogue i Elle.',
     link: 'https://www.fasforartssake.com//',

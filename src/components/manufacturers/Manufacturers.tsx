@@ -46,29 +46,29 @@ const Manufacturers = () => {
   };
 
   return (
-    <section>
+    <section className={styles.manufacturersSection}>
+      {loaded && instanceRef.current && (
+        <div className={styles.manufacturers__navigation__arrows}>
+          <Arrow
+            left
+            onClick={(e: any) =>
+              e.stopPropagation() || instanceRef.current?.prev()
+            }
+            disabled={currentSlide === 0}
+          />
+
+          <Arrow
+            onClick={(e: any) =>
+              e.stopPropagation() || instanceRef.current?.next()
+            }
+            disabled={currentSlide === 1}
+          />
+        </div>
+      )}
       <div
         ref={ref}
         className={['keen-slider', styles.manufacturers].join(' ')}
       >
-        {loaded && instanceRef.current && (
-          <div className={styles.manufacturers__navigation__arrows}>
-            <Arrow
-              left
-              onClick={(e: any) =>
-                e.stopPropagation() || instanceRef.current?.prev()
-              }
-              disabled={currentSlide === 0}
-            />
-
-            <Arrow
-              onClick={(e: any) =>
-                e.stopPropagation() || instanceRef.current?.next()
-              }
-              disabled={currentSlide === 1}
-            />
-          </div>
-        )}
         {manufacturers.map((manufacturer: ManufacturerProps, index: number) => (
           <article
             className={[
