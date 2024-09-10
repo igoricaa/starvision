@@ -163,12 +163,20 @@
   }
 }
 
+@media screen and (max-width: 1300px) {
+  .contact {
+    width: 900px;
+    height: 500px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .contact {
     width: calc(100vw - 4rem);
     height: auto;
     flex-direction: column;
-    top: calc(50% + 2rem);
+    top: 3rem;
+    transform: translate(-50%, 0);
     padding: 0.25rem;
 
     &__closeButton {
