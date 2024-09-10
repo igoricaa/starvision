@@ -4,6 +4,7 @@ import Link from 'next/link';
 import styles from './Navigation.module.scss';
 import BurgerIcon from '../ui/BurgerIcon';
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { useContactDialog } from '../context/ContactDialogProvider';
 
 const menuItems = [
   { href: '#brands', text: 'Brendovi', className: 'first' },
@@ -17,6 +18,7 @@ const menuItems = [
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const burgerRef = useRef<HTMLDivElement>(null);
+  const { openDialog } = useContactDialog();
 
   const toggleMenu = useCallback(() => {
     setIsOpen((prev) => !prev);
@@ -43,7 +45,9 @@ const Navigation = () => {
   }, [toggleMenu, handleScroll]);
 
   return (
-    <nav className={`${styles.navigation} ${isOpen ? styles.open : ''} darkLogo`}>
+    <nav
+      className={`${styles.navigation} ${isOpen ? styles.open : ''} darkLogo`}
+    >
       <ul className={styles.navigation__menu}>
         {menuItems.slice(0, 4).map((item, index) => (
           <li
@@ -58,16 +62,28 @@ const Navigation = () => {
       </ul>
       <div className={styles.navigation__helperWrapper}>
         <ul className={styles.navigation__menu}>
-          {menuItems.slice(4).map((item, index) => (
-            <li
-              key={item.href}
-              className={`${styles.navigation__menu__item} ${
-                styles[`navigation__menu__item__${item.className}`]
-              }`}
-            >
-              <Link href={item.href}>{item.text}</Link>
-            </li>
-          ))}
+          {menuItems.slice(4).map((item, index) =>
+            index === 0 ? (
+              <li
+                key={item.href}
+                className={`${styles.navigation__menu__item} ${
+                  styles[`navigation__menu__item__${item.className}`]
+                }`}
+              >
+                <Link href={item.href}>{item.text}</Link>
+              </li>
+            ) : (
+              <li
+                key={item.href}
+                onClick={openDialog}
+                className={`${styles.contactButton} ${
+                  styles.navigation__menu__item
+                } ${styles[`navigation__menu__item__${item.className}`]}`}
+              >
+                {item.text}
+              </li>
+            )
+          )}
         </ul>
         <div ref={burgerRef} className={styles.navigation__burger}>
           <BurgerIcon color='#000' />
