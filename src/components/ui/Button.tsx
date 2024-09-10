@@ -9,6 +9,7 @@ type ButtonProps = {
   link: string;
   variant?: 'transparent' | 'primary';
   external?: boolean;
+  className?: string;
   children: React.ReactNode;
 };
 
@@ -30,6 +31,7 @@ const Button = ({
   variant = 'primary',
   external = false,
   children,
+  className,
 }: ButtonProps) => {
   const buttonRef = useRef<HTMLAnchorElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
@@ -60,7 +62,7 @@ const Button = ({
       ref={buttonRef}
       href={link}
       target={external ? '_blank' : '_self'}
-      className={[styles.button, styles[variant]].join(' ')}
+      className={[styles.button, styles[variant], className].join(' ')}
     >
       <span ref={overlayRef} className={styles.overlay} />
       <p>{children}</p>
