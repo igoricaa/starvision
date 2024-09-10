@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef } from 'react';
 import styles from './Button.module.scss';
 import Link from 'next/link';
 import ArrowRight from '../icons/ArrowRight';
+import { useContactDialog } from '../context/ContactDialogProvider';
 
 type ButtonProps = {
   link?: string;
@@ -11,6 +12,7 @@ type ButtonProps = {
   external?: boolean;
   className?: string;
   onClick?: () => void;
+  isContactButton?: boolean;
   children: React.ReactNode;
 };
 
@@ -34,9 +36,11 @@ const Button = ({
   children,
   className,
   onClick,
+  isContactButton,
 }: ButtonProps) => {
   const buttonRef = useRef<HTMLAnchorElement | HTMLButtonElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
+  const { openDialog } = useContactDialog();
 
   const handleMouseEvent = useCallback((e: MouseEvent) => {
     if (buttonRef.current && overlayRef.current) {
@@ -85,7 +89,7 @@ const Button = ({
         <button
           ref={buttonRef as React.RefObject<HTMLButtonElement>}
           className={[styles.button, styles[variant], className].join(' ')}
-          onClick={onClick}
+          onClick={isContactButton ? openDialog : onClick}
         >
           <span ref={overlayRef} className={styles.overlay} />
           <p>{children}</p>

@@ -2,19 +2,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Footer.module.scss';
 import {
+  ContactItem,
   footerFirstColumnItems,
   footerSecondColumnItems,
   MenuItem,
 } from '@/data';
-
-type ContactItem = {
-  href: string;
-  text: string;
-  className: string;
-  target?: string;
-  rel?: string;
-  ariaLabel?: string;
-};
 
 const ContactInfo = () => (
   <div className={styles.footer__contactInfo}>

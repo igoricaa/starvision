@@ -24,7 +24,7 @@ const Hero = () => {
       </p>
       <div className={styles.hero__buttonsWrapper}>
         <Button link='#about'>Saznaj Više</Button>
-        <Button link='#kontakt' variant='transparent'>
+        <Button variant='transparent' isContactButton>
           Kontaktirajte Nas
         </Button>
       </div>

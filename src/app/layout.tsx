@@ -5,6 +5,8 @@ import Header from '@/components/header/Header';
 import Footer from '@/components/footer/Footer';
 import Banner from '@/components/header/Banner';
 import Lenis from '@/components/Lenis';
+import { ContactDialogProvider } from '@/components/context/ContactDialogProvider';
+import Contact from '@/components/contact/Contact';
 
 const josefin = Josefin_Sans({
   subsets: ['latin'],
@@ -34,10 +36,13 @@ export default function RootLayout({
     <html lang='en'>
       <body className={`${josefin.variable} ${cormorant.variable}`}>
         <Lenis>
-          <Banner />
-          <Header />
-          {children}
-          <Footer />
+          <ContactDialogProvider>
+            <Banner />
+            <Header />
+            {children}
+            <Footer />
+            <Contact />
+          </ContactDialogProvider>
         </Lenis>
       </body>
     </html>

@@ -212,3 +212,12 @@ export const manufacturers: ManufacturerProps[] = [
     link: 'https://www.fasforartssake.com//',
   },
 ];
+
+export type ContactItem = {
+  href: string;
+  text: string;
+  className: string;
+  target?: string;
+  rel?: string;
+  ariaLabel?: string;
+};

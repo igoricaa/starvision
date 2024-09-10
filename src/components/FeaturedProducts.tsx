@@ -31,6 +31,7 @@ const MainFeaturedProduct = memo(() => (
       alt='Star Vision aktuelna ponuda'
       className={`${styles.featuredProducts__item__bg} ${styles.featuredProducts__item__bg__hover}`}
       fill
+      sizes='(max-width: 1024px) 100vw, 66vw'
     />
     <h2 className={styles.featuredProducts__item__main__title}>
       Aktuelni modeli
@@ -56,6 +57,7 @@ const FeaturedProduct = memo(
         alt={`${title} naočare`}
         className={`${styles.featuredProducts__item__bg} ${styles.featuredProducts__item__bg__hover}`}
         fill
+        sizes='(max-width: 1024px) 50vw, 33vw'
       />
       <h4 className={styles.featuredProducts__item__title}>{title}</h4>
       <h6 className={styles.featuredProducts__item__category}>{category}</h6>
