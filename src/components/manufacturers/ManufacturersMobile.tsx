@@ -55,6 +55,7 @@ const ManufacturersMobile = () => {
               <Image
                 src={manufacturer.imageMobile}
                 alt={manufacturer.name}
+                priority
                 fill
                 sizes='100vw - 2rem'
               />
