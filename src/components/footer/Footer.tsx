@@ -7,6 +7,7 @@ import {
   footerSecondColumnItems,
   MenuItem,
 } from '@/data';
+import FooterContactItem from './FooterContactItem';
 
 const ContactInfo = () => (
   <div className={styles.footer__contactInfo}>
@@ -56,11 +57,16 @@ type MenuColumnProps = {
 const MenuColumn = ({ items, className }: MenuColumnProps) => (
   <div className={`${styles.footer__menu__column} ${styles[className]}`}>
     <ul>
-      {items.map(({ href, text }: MenuItem) => (
-        <li key={href} className={styles.footer__menu__column__item}>
-          <Link href={href}>{text}</Link>
-        </li>
-      ))}
+      {items.map(({ href, text }: MenuItem, index: number) => {
+        if (className === 'first' && index === 1) {
+          return <FooterContactItem key={href} />;
+        }
+        return (
+          <li key={href} className={styles.footer__menu__column__item}>
+            <Link href={href}>{text}</Link>
+          </li>
+        );
+      })}
     </ul>
   </div>
 );

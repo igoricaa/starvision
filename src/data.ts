@@ -124,6 +124,7 @@ export type CtaItemProps = {
   imageAlt: string;
   title: string;
   buttonText: string;
+  isContactButton?: boolean;
 };
 
 export const ctaItems: CtaItemProps[] = [
@@ -137,7 +138,7 @@ export const ctaItems: CtaItemProps[] = [
     imageSrc: '/home/locations.png',
     imageAlt: 'Star Vision lokacije',
     title: 'Regionalno prisutni, globalno orijentisani',
-    buttonText: 'Nadjite lokaciju',
+    buttonText: 'Nađite lokaciju',
   },
 ];
 

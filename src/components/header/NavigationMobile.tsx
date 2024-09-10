@@ -4,10 +4,12 @@ import { useEffect, useRef, useState } from 'react';
 import LogoFull from '../ui/LogoFull';
 import styles from './NavigationMobile.module.scss';
 import Logo from '../ui/Logo';
+import { useContactDialog } from '../context/ContactDialogProvider';
 
 const NavigationMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
   const burgerRef = useRef<HTMLDivElement>(null);
+  const { openDialog } = useContactDialog();
 
   useEffect(() => {
     const toggleMenu = () => setIsOpen(!isOpen);
@@ -16,6 +18,11 @@ const NavigationMobile = () => {
       burger.addEventListener('click', toggleMenu);
     }
   }, [isOpen]);
+
+  const handleContactClick = () => {
+    openDialog();
+    setIsOpen(false);
+  };
 
   return (
     <>
@@ -53,9 +60,7 @@ const NavigationMobile = () => {
             <li>
               <a href='#partners'>Lista partnera</a>
             </li>
-            <li>
-              <a href='#contact'>Kontakt</a>
-            </li>
+            <li onClick={handleContactClick}>Kontakt</li>
           </ul>
         </div>
         <div className={styles.navigation__mobile__footer}>

@@ -69,8 +69,8 @@
       position: relative;
       padding: 0 1rem;
 
-      > div {
-        z-index: 100;
+      > div:first-of-type {
+        z-index: 1000;
 
         svg {
           width: 37px;
