@@ -12,7 +12,7 @@ const josefin = Josefin_Sans({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-josefin',
-  weight: ['300', '400'],
+  weight: ['300', '400', '500'],
 });
 
 const cormorant = Cormorant_Garamond({

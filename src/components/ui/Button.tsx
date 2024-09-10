@@ -13,6 +13,7 @@ type ButtonProps = {
   className?: string;
   onClick?: () => void;
   isContactButton?: boolean;
+  type?: 'reset' | 'submit' | 'button';
   children: React.ReactNode;
 };
 
@@ -37,6 +38,7 @@ const Button = ({
   className,
   onClick,
   isContactButton,
+  type,
 }: ButtonProps) => {
   const buttonRef = useRef<HTMLAnchorElement | HTMLButtonElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
@@ -87,6 +89,7 @@ const Button = ({
         </Link>
       ) : (
         <button
+          type={type}
           ref={buttonRef as React.RefObject<HTMLButtonElement>}
           className={[styles.button, styles[variant], className].join(' ')}
           onClick={isContactButton ? openDialog : onClick}
