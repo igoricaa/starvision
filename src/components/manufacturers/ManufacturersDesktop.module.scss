@@ -3,6 +3,12 @@
   display: flex;
   gap: 2rem;
   transition: transform 0.5s ease;
+  position: relative;
+
+  > h2 {
+    top: 3rem;
+    right: -3rem;
+  }
 
   &.shifted {
     transform: translateX(-500px);

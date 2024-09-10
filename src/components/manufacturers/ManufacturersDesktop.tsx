@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Button from '../ui/Button';
 import { useState } from 'react';
 import { ManufacturerProps, manufacturers } from '@/data';
+import SectionTitle from '../SectionTitle';
 
 const ManufacturersDesktop = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -20,6 +21,7 @@ const ManufacturersDesktop = () => {
         activeIndex === 2 || activeIndex === 3 ? styles.shifted : '',
       ].join(' ')}
     >
+      <SectionTitle>Naši proizvođači</SectionTitle>
       {manufacturers.map((manufacturer: ManufacturerProps, index: number) => (
         <article
           className={[

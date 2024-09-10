@@ -6,6 +6,7 @@ import { ManufacturerProps, manufacturers } from '@/data';
 import Button from '../ui/Button';
 import { useKeenSlider } from 'keen-slider/react';
 import { useState } from 'react';
+import SectionTitle from '../SectionTitle';
 
 const ManufacturersMobile = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -22,6 +23,7 @@ const ManufacturersMobile = () => {
 
   return (
     <section className={styles.manufacturers}>
+      <SectionTitle>Naši proizvođači</SectionTitle>
       {loaded && instanceRef.current && (
         <>
           <Arrow

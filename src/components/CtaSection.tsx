@@ -2,6 +2,7 @@ import styles from './CtaSection.module.scss';
 import Image from 'next/image';
 import Button from './ui/Button';
 import { CtaItemProps, ctaItems } from '@/data';
+import SectionTitle from './SectionTitle';
 
 const CtaItem = ({ imageSrc, imageAlt, title, buttonText }: CtaItemProps) => (
   <div
@@ -24,6 +25,7 @@ const CtaItem = ({ imageSrc, imageAlt, title, buttonText }: CtaItemProps) => (
 const CtaSection = () => {
   return (
     <div className={styles.ctaSection}>
+      <SectionTitle>Dodatne informacije</SectionTitle>
       {ctaItems.map((item, index) => (
         <CtaItem key={index} {...item} />
       ))}

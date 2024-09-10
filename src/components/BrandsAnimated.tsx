@@ -2,10 +2,12 @@ import { brandsAnimated } from '@/data';
 import styles from './BrandsAnimated.module.scss';
 import BrandAnimated from './BrandAnimated';
 import Logo from './ui/Logo';
+import SectionTitle from './SectionTitle';
 
 const BrandsAnimated = () => {
   return (
     <section className={styles.brandsAnimated}>
+      <SectionTitle>Brendovi</SectionTitle>
       <div className={styles.brandsAnimated__header}>
         <Logo color='#000' />
         <p className={styles.brandsAnimated__header__title}>

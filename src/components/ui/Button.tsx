@@ -6,16 +6,17 @@ import Link from 'next/link';
 import ArrowRight from '../icons/ArrowRight';
 
 type ButtonProps = {
-  link: string;
+  link?: string;
   variant?: 'transparent' | 'primary';
   external?: boolean;
   className?: string;
+  onClick?: () => void;
   children: React.ReactNode;
 };
 
 export const calculateOverlayPosition = (
   event: MouseEvent,
-  element: HTMLAnchorElement,
+  element: HTMLAnchorElement | HTMLButtonElement,
   overlay: HTMLDivElement
 ) => {
   if (!event) return;
@@ -32,8 +33,9 @@ const Button = ({
   external = false,
   children,
   className,
+  onClick,
 }: ButtonProps) => {
-  const buttonRef = useRef<HTMLAnchorElement>(null);
+  const buttonRef = useRef<HTMLAnchorElement | HTMLButtonElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
 
   const handleMouseEvent = useCallback((e: MouseEvent) => {
@@ -45,31 +47,54 @@ const Button = ({
   useEffect(() => {
     const button = buttonRef.current;
     if (button) {
-      button.addEventListener('mouseenter', handleMouseEvent);
-      button.addEventListener('mouseout', handleMouseEvent);
+      button.addEventListener('mouseenter', handleMouseEvent as EventListener);
+      button.addEventListener('mouseout', handleMouseEvent as EventListener);
     }
 
     return () => {
       if (button) {
-        button.removeEventListener('mouseenter', handleMouseEvent);
-        button.removeEventListener('mouseout', handleMouseEvent);
+        button.removeEventListener(
+          'mouseenter',
+          handleMouseEvent as EventListener
+        );
+        button.removeEventListener(
+          'mouseout',
+          handleMouseEvent as EventListener
+        );
       }
     };
   }, [handleMouseEvent]);
 
   return (
-    <Link
-      ref={buttonRef}
-      href={link}
-      target={external ? '_blank' : '_self'}
-      className={[styles.button, styles[variant], className].join(' ')}
-    >
-      <span ref={overlayRef} className={styles.overlay} />
-      <p>{children}</p>
-      <i>
-        <ArrowRight color={variant === 'transparent' ? '#fff' : '#000'} />
-      </i>
-    </Link>
+    <>
+      {link ? (
+        <Link
+          ref={buttonRef as React.RefObject<HTMLAnchorElement>}
+          href={link}
+          target={external ? '_blank' : '_self'}
+          className={[styles.button, styles[variant], className].join(' ')}
+          onClick={onClick}
+        >
+          <span ref={overlayRef} className={styles.overlay} />
+          <p>{children}</p>
+          <i>
+            <ArrowRight color={variant === 'transparent' ? '#fff' : '#000'} />
+          </i>
+        </Link>
+      ) : (
+        <button
+          ref={buttonRef as React.RefObject<HTMLButtonElement>}
+          className={[styles.button, styles[variant], className].join(' ')}
+          onClick={onClick}
+        >
+          <span ref={overlayRef} className={styles.overlay} />
+          <p>{children}</p>
+          <i>
+            <ArrowRight color={variant === 'transparent' ? '#fff' : '#000'} />
+          </i>
+        </button>
+      )}
+    </>
   );
 };
 

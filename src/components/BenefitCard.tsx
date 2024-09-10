@@ -4,6 +4,7 @@ import { useState } from 'react';
 import styles from './BenefitCard.module.scss';
 import Logo from './ui/Logo';
 import ArrowRight from './icons/ArrowRight';
+import Button from './ui/Button';
 
 const BenefitCard = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -50,12 +51,12 @@ const BenefitCard = () => {
         znanja i savete uz poslednje vesti i zanimljivosti iz sveta optike.
       </p>
 
-      <button
+      <Button
         onClick={() => setIsExpanded(!isExpanded)}
         className={styles.benefits__card__expandButton}
       >
         {isExpanded ? 'Sakrij' : 'Pročitaj više'}
-      </button>
+      </Button>
     </div>
   );
 };
