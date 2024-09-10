@@ -12,18 +12,6 @@
     object-fit: cover;
   }
 
-  // &__newsletterButton {
-  //   position: absolute;
-  //   top: 6.25rem;
-  //   right: 3rem;
-  //   z-index: 1;
-  //   background-color: #ff385c;
-  //   color: #fff;
-  //   padding: 0.5rem 1rem;
-  //   border-radius: 3rem;
-  //   font-size: 14px;
-  // }
-
   > p {
     font-size: 1.125rem;
     margin-block-start: 1.5rem;
@@ -47,12 +35,6 @@
 @media screen and (max-width: 480px) {
   .hero {
     padding-bottom: 1.5rem;
-
-    // &__newsletterButton {
-    //   top: 5.875rem;
-    //   left: 1rem;
-    //   right: unset;
-    // }
 
     > p {
       font-size: 1rem;

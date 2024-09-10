@@ -5,11 +5,7 @@ import { CtaItemProps, ctaItems } from '@/data';
 import SectionTitle from './SectionTitle';
 
 const CtaItem = ({ imageSrc, imageAlt, title, buttonText }: CtaItemProps) => (
-  <div
-    className={`${styles.ctaSection__item} ${
-      styles[`ctaSection__${imageAlt.toLowerCase()}`]
-    }`}
-  >
+  <div className={`${styles.ctaSection__item} darkLogo`}>
     <Image
       src={imageSrc}
       alt={imageAlt}

@@ -8,15 +8,21 @@
   &__wrapper {
     width: 100%;
     height: 4rem;
-    padding: 0 1rem;
+    padding: 0 2.5rem;
     display: flex;
     align-items: center;
 
-    > svg {
-      width: 170px;
-      height: 34px;
+    > div {
       z-index: 100;
-      padding-left: 1rem;
+
+      svg {
+        width: 170px;
+        height: 34px;
+
+        path {
+          transition: fill 0.3s ease;
+        }
+      }
     }
   }
 
@@ -43,6 +49,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .logoFull {
+    display: none;
+  }
+
   .header {
     top: 2rem;
 
@@ -58,6 +68,19 @@
       display: block;
       position: relative;
       padding: 0 1rem;
+
+      > div {
+        z-index: 100;
+
+        svg {
+          width: 37px;
+          height: 37px;
+
+          path {
+            transition: fill 0.3s ease;
+          }
+        }
+      }
     }
   }
 }

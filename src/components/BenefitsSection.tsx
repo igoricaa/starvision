@@ -4,7 +4,7 @@ import BenefitCard from './BenefitCard';
 
 const BenefitsSection = () => {
   return (
-    <section className={styles.benefits}>
+    <section className={[styles.benefits, 'darkLogo'].join(' ')}>
       <Image
         src='/home/benefits-bg.png'
         alt='Star Vision benefiti i zanimljivosti'

@@ -1,11 +1,10 @@
 import Image from 'next/image';
 import styles from './Hero.module.scss';
 import Button from './ui/Button';
-import Link from 'next/link';
 
 const Hero = () => {
   return (
-    <section className={[styles.hero, 'side__padding'].join(' ')}>
+    <section className={[styles.hero, 'side__padding', 'darkLogo'].join(' ')}>
       <Image
         src='/home/hero-bg.png'
         alt='Star Optics'
@@ -13,10 +12,6 @@ const Hero = () => {
         fill
         priority
       />
-{/* 
-      <Link href='#newsletter' className={styles.hero__newsletterButton}>
-        Prati Naš Newsletter
-      </Link> */}
 
       <h1>
         Star Vision

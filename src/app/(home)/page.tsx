@@ -6,14 +6,13 @@ import TestimonialsSection from '@/components/TestimonialsSection';
 import AboutSection from '@/components/AboutSection';
 import FeaturedProducts from '@/components/FeaturedProducts';
 import BrandsAnimated from '@/components/BrandsAnimated';
-import NewsletterSection from '@/components/NewsletterSection';
 import BenefitsSection from '@/components/BenefitsSection';
 import CtaSection from '@/components/CtaSection';
 import Manufacturers from '@/components/manufacturers/Manufacturers';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main id='home' className={styles.main}>
       <Hero />
       <BrandsSlider />
       <OfferSection />
@@ -23,10 +22,7 @@ export default function Home() {
       <AboutSection />
       <TestimonialsSection />
       <BenefitsSection />
-      {/* <PartnersSection/> */}
       <CtaSection />
-
-      {/* <NewsletterSection /> */}
     </main>
   );
 }

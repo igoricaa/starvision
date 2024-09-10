@@ -13,7 +13,11 @@ const AboutSection = () => {
   });
 
   return (
-    <section id='about' className={styles.about} ref={ref}>
+    <section
+      id='about'
+      className={[styles.about, 'darkLogo'].join(' ')}
+      ref={ref}
+    >
       <Image
         src='/home/about-bg.png'
         alt='Star Vision o nama'
@@ -22,7 +26,11 @@ const AboutSection = () => {
       />
 
       <div
-        className={[styles.about__card, inView ? styles.visible : ''].join(' ')}
+        className={[
+          styles.about__card,
+          inView ? styles.visible : '',
+          'darkLogo',
+        ].join(' ')}
       >
         <Logo size={370} />
 

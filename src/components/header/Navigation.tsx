@@ -43,7 +43,7 @@ const Navigation = () => {
   }, [toggleMenu, handleScroll]);
 
   return (
-    <nav className={`${styles.navigation} ${isOpen ? styles.open : ''}`}>
+    <nav className={`${styles.navigation} ${isOpen ? styles.open : ''} darkLogo`}>
       <ul className={styles.navigation__menu}>
         {menuItems.slice(0, 4).map((item, index) => (
           <li

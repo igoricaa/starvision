@@ -4,7 +4,7 @@
   align-items: center;
   background-color: #fff;
   position: absolute;
-  right: 1rem;
+  right: 2.5rem;
   top: 0;
   padding: 14px 1rem 14px 0;
   border-radius: 0.25rem;
@@ -28,7 +28,7 @@
   }
 
   &.open {
-    width: calc(100% - 2rem);
+    width: calc(100% - 5rem);
     padding-left: 251px;
     padding-right: 83px;
     transition-delay: 0s;
