@@ -1,7 +1,7 @@
 .navigation {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   background-color: #fff;
   position: absolute;
   right: 1rem;
@@ -67,9 +67,6 @@
   &__menu {
     display: flex;
     gap: 1.5rem;
-    // opacity: 0;
-    // visibility: hidden;
-    // transition: opacity 1s ease, visibility 1s ease;
 
     &__item {
       opacity: 0;

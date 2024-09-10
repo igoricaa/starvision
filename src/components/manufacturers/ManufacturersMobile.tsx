@@ -51,10 +51,10 @@ const ManufacturersMobile = () => {
           >
             <div className={styles.manufacturer__image}>
               <Image
-                src={manufacturer.image}
+                src={manufacturer.imageMobile}
                 alt={manufacturer.name}
                 fill
-                sizes='100vw'
+                sizes='100vw - 2rem'
               />
             </div>
             <Image

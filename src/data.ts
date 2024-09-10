@@ -161,6 +161,7 @@ export const footerSecondColumnItems: MenuItem[] = [
 export type ManufacturerProps = {
   name: string;
   image: string;
+  imageMobile: string;
   logo: string;
   logoWhite: string;
   title?: string;
@@ -173,6 +174,7 @@ export const manufacturers: ManufacturerProps[] = [
     name: 'etnia',
     image: '/brands/etnia.png',
     logo: '/brands/etnia-logo.svg',
+    imageMobile: '/brands/mobile/etnia.png',
     logoWhite: '/brands/etnia-logo-white.svg',
     title: 'Spojiti nesvakidasnje',
     description:
@@ -182,6 +184,7 @@ export const manufacturers: ManufacturerProps[] = [
   {
     name: 'safilo',
     image: '/brands/safilo.png',
+    imageMobile: '/brands/mobile/safilo.png',
     logo: '/brands/safilo-logo.svg',
     logoWhite: '/brands/safilo-logo-white.svg',
     description:
@@ -191,6 +194,7 @@ export const manufacturers: ManufacturerProps[] = [
   {
     name: 'menrad',
     image: '/brands/menrad.png',
+    imageMobile: '/brands/mobile/menrad.png',
     logo: '/brands/menrad-logo.svg',
     logoWhite: '/brands/menrad-logo-white.svg',
     description:
@@ -201,6 +205,7 @@ export const manufacturers: ManufacturerProps[] = [
     name: 'forartssake',
     image: '/brands/fas.png',
     logo: '/brands/fas-logo.png',
+    imageMobile: '/brands/mobile/fas.png',
     logoWhite: '/brands/fas-logo.png',
     description:
       'Londonski brend For Art&#39;s Sake, osnovan 2016. godine, poznat je po luksuznim sunčanim naočarima koje kombinuju umetnost i funkcionalnost. Njihovi dizajni su kreirani za samouverene žene i dostupni su u preko 500 prestižnih prodavnica širom sveta. Obožavaju ih slavne ličnosti poput Beyonce i Olivije Palermo, a često se pojavljuju u vodećim modnim časopisima poput Vogue i Elle.',
