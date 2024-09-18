@@ -165,6 +165,15 @@
   }
 }
 
+@media (min-width: 1920px) {
+  .footer {
+    height: 50rem;
+    &__bottom__logo {
+      bottom: -4rem;
+    }
+  }
+}
+
 @media (max-width: 1024px) {
   .footer {
     padding: 4rem 1.5rem 2rem;
