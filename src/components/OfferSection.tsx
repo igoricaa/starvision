@@ -32,7 +32,7 @@ const OfferItem = ({ title, description, image }: OfferItemProps) => {
     <article className={styles.offer__item}>
       <Image
         src={image}
-        alt={`Star Optics ${title.toLowerCase()} naočare`}
+        alt={`Star Vision ${title.toLowerCase()} naočare`}
         className={styles.offer__item__bg}
         fill
         sizes='(max-width: 1024px) 100vw, 33vw'

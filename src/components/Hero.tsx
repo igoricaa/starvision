@@ -7,7 +7,7 @@ const Hero = () => {
     <section className={[styles.hero, 'side__padding', 'darkLogo'].join(' ')}>
       <Image
         src='/home/hero-bg.png'
-        alt='Star Optics'
+        alt='Star Vision'
         className={styles.hero__bg}
         fill
         priority

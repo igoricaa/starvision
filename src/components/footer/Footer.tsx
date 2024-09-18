@@ -82,12 +82,14 @@ const Footer = () => {
           className={`${styles.colaboration} ${styles.footer__menu__column}`}
         >
           <p>U saradnji sa:</p>
-          <Image
-            src='/grossoptics.svg'
-            alt='Grossoptics'
-            width={163}
-            height={71}
-          />
+          <a href='https://grossoptic.com/' target='_blank' rel='noreferrer'>
+            <Image
+              src='/grossoptics.svg'
+              alt='Grossoptics'
+              width={163}
+              height={71}
+            />
+          </a>
         </div>
       </div>
       <div className={styles.footer__bottom__logo}>
