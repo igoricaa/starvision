@@ -77,9 +77,14 @@
       font-size: 1rem;
       color: #000;
       border-radius: 3rem;
-      border: 1px solid #000;
+      border: 1px solid #000 !important;
       margin-block-start: 3rem;
       cursor: pointer;
+      transition: box-shadow 0.5s ease, border-color 0.3s ease !important;
+
+      &:hover {
+        border-color: #66cdec !important;
+      }
     }
   }
 }
